@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Formulario GLOBANT</title>
+	
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="css/nav_bar.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="http://blazeworx.com/flags.css" rel="stylesheet">
+
+	<script src="modernizr-custom.js"></script>
+
+
+</head>
+
+<body>
+
+	<section class="formulario p-2 pb-4">
+		
+		<header class="encabezado">
+				<nav class="navbar navbar-toggleable-md navbar-light fixed-top">
+
+					<div class="container">
+					 
+					  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+					    <i class="fa fa-bars" aria-hidden="true"></i>
+					  </button>
+					  <a class="navbar-brand" href="index.html">globant</a>
+
+					  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+					    <ul class="navbar-nav ml-auto mt-2 mt-md-0 ">
+
+					      <li class="nav-item">
+					        <a class="nav-link" href="index.html">Inicio</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link nav_move" href="index.html #n_serv">Servicios</a>
+					      </li>
+					      <li class="nav-item  active">
+					    	  <a href="formulario.html" class="nav-link">Contacto</a>
+					      </li>
+					    
+					    </ul>
+					  </div>
+
+					 </div>
+
+				</nav>
+			</header>	
+	
+
+		<div class="container mt-5 pt-4">
+			<div class="first p-3 mx-auto">
+				<i class="fa fa-file-text mb-3" aria-hidden="true"></i>
+				<h1>Formulario Globant</h1>
+			</div>
+		</div>
+
+		<div class="container ">
+
+			<form class="form-main p-5 mx-auto" name="Formulario"  method="post" action="javascript:void(0);">
+
+				<div class="form-group row">
+				  
+				  <label for="nombre" class="col-12 col-md-2 my-auto col-form-label">Nombre*</label>
+
+				  <div class="col-12 col-md-4 mt-2 ">
+				    <input class="form-control my-auto" type="text" placeholder="Nombre" id="nombre">
+				  </div>
+
+				  <label for="apellido" class="col-12 col-md-2 my-auto col-form-label">Apellido*</label>
+
+				  <div class="col-12 col-md-4 mt-2 ">
+				    <input class="form-control  my-auto" type="text" placeholder="Apellido" id="apellido">
+				  </div>
+
+				  <label for="email" class="col-12 col-md-2  col-form-label">E-mail*</label>
+
+				  <div class="col-12 col-md-10 mt-2 ">
+				    <input class="form-control  my-auto" type="email" placeholder="Correo electrónico" id="email">
+
+				  </div>
+
+				</div>
+
+				<!-- Datepicker -->
+
+				<div class="form-group row">
+
+				 	<label for="date" class="col-12 col-md-2 my-auto col-form-label">Fecha nacimiento*</label>
+					
+					<div class="col-12 col-md-4 ">					  
+					    <input id="datepicker" type ="text" class="form-control ">
+					</div>
+
+				</div>
+				<!-- END DATEPICKER -->
+
+
+				<div class="form-group row">
+				
+				  	<label for="direccion" class="col-12 col-md-2 my-auto col-form-label">Dirección*</label>
+				  	<div class="col-12 col-md-10 mt-3">
+						<input id="direccion" class="form-control " name="dirección" type="text" placeholder="Dirección">
+					</div>
+
+					<!--SELECT COUNTRY-->
+				
+				  	<label for="select_country" class="col-12 col-md-2 my-auto col-form-label">País*</label>
+				  	<div class="col-12 col-md-4 mt-3">
+      					<div class="flagstrap form-control" id="select_country" data-input-name="NewBuyer_country" data-selected-country=""></div>
+					</div>
+					<!-- END SELECT COUNTRY -->
+
+				  	<label for="depart" class="col-12 col-md-2 my-auto col-form-label">Departamento</label>
+				  	<div class="col-12 col-md-4 mt-3">
+				 		<input id="depart" class="form-control" name="departamento" type="text" placeholder="Departamento(opcional)">
+					</div>
+
+				  	<label for="city" class="col-12 col-md-2 my-auto col-form-label">Ciudad*</label>
+				  	<div class="col-12 col-md-4 mt-3">
+						<input id="city" class="form-control" name="ciudad" type="text" placeholder="Ciudad">
+					</div>
+
+				  	<label for="zip-code" class="col-12 col-md-2 my-auto col-form-label">Zip*</label>		
+				  	<div class="col-12 col-md-4 mt-3">
+				  		<input id="zip-code" class="form-control" name="zipCode" type="text" placeholder="Código Zip">
+					</div>
+
+					<div class="col-12 text-center mt-4">
+						<input class="enviar btn-lg btn-primary my-auto col-4" name="enviar" type="Submit" value="Enviar" onclick="validaciones();">
+					</div>
+
+				</div>
+				
+			</form>
+		</div>
+	</section>
+
+
+	<!-- Modal correcto -->
+		<div class="modal fade mgreen" id="modal-good" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Los datos fueron enviados correctamente</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-footer mx-auto">
+		        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cerrar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal vacio -->
+		<div class="modal fade mred" id="modal-wrong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">* Aun hay campos vacios</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-footer mx-auto">
+		        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cerrar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal email -->
+		<div class="modal fade myellow id="modal-email" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">*Debe ingresar un correo valido (example@ex.com)</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-footer mx-auto">
+		        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cerrar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal zip -->
+		<div class="modal fade myellow" id="modal-zip" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">*Debe ingresar un ZIP valido (example: 12345)</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-footer mx-auto">
+		        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cerrar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal adult -->
+		<div class="modal fade mred" id="modal-adult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">*Debe ser mayor de 18 años para ingresar aquí</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-footer mx-auto">
+		        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cerrar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	<footer class="text-center p-4">
+		<p class="my-auto">Luis Felipe Moscoso Martínez - Globant 2017</p>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="http://blazeworx.com/jquery.flagstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/formulario.js"></script>
+
+</body>
+</html>
